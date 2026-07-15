@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #454545;
+  font-family: "Lexend Deca", sans-serif;
+  color: #454545;
+  padding: 20vh 0;
+}
+
+/* Wrapper */
+.card-wrapper {
+  width: 60%;
+  max-width: 900px;
+  min-width: 250px;
+}
+
+a {
+  color: #2e5eaa;
+}
+a:visited {
+  color: #000000;
+}
+/* Yläosa */
+.card-top {
+  position: relative;
+  background-image: url("kuvat/background2.jpeg");
+  background-size: cover;
+  background-position: center 20%;
+  padding: 48px 36px 12px 36px;
+  border-radius: 20px 20px 0 0;
+  color: #f9fafb;
+  min-height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.card-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* tummennus */
+  /*backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);*/
+}
+/* Profiilikuva */
+.profile-image {
+  position: relative;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid rgba(249, 250, 251, 0.9);
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+
+}
+
+/* Yläosan tekstit */
+.card-top-content {
+  position: relative;
+
+}
+
+.card-title {
+  margin: 0 0 10px;
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #e4e4e4;
+ 
+}
+.card-top-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-subtitle {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #e4e4e4;
+  padding-bottom: 36px;
+}
+.card-top-links {
+    margin: 0;
+    align-self: end;
+}
+.card-top-links a {
+    margin-left: 5px;
+}
+.card-b-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333333;
+  font-weight: 800;
+}
+
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  text-decoration: none;
+  overflow: hidden;
+  color: blue;
+}
+
+.icon-link svg {
+  width: 60%;
+  height: 60%;
+  fill: #454545;
+}
+
+
+/* Alaosa */
+.card-bottom {
+  background: #ffffff;
+  padding: 36px 36px 48px 36px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.card-text {
+  margin: 0;
+  color: #454545;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  flex: 1;
+}
+.card-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* Nappulat */
+.buttons-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  min-width: 120px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+  font-family: "Lexend Deca", sans-serif;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #454545;
+  color: #e4e4e4;
+
+}
+
+.btn-secondary {
+  background: #e4e4e4;
+  color: #454545;
+}
+
+.btn-other {
+  background: #ffffff;
+  color: #454545;
+}
+
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Mobiili */
+@media (max-width: 990px) {
+  .card-wrapper {
+    width: 90%;
+    max-width: 593px;
+  }
+
+  .card-top-content {
+    margin-left: 0;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  
+
+  .card-bottom {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .buttons-column {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
+
+@media (max-height: 700px) {
+  body {
+    align-items: flex-start;
+    padding: 10vh 0;
+    height: auto;
+  }
+}

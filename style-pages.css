@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  background: #454545;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+/* Valkoinen kortti */
+.page-wrapper {
+  background: #ffffff;
+  width: 60%;
+  max-width: 900px;
+  min-width: 250px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+.section a {
+  color: #2e5eaa;
+}
+.section a:visited {
+  color: #2e5eaa;
+}
+/* Osiot */
+.section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.section-left {
+  width: 20%;
+  min-width: 115px;
+  flex-shrink: 0;
+}
+
+.section-right {
+  flex: 1;
+  padding-top:1em;
+}
+
+.section-title {
+  font-family: "Lexend Giga", sans-serif;
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+/* Profiilikuva About-osiossa */
+.about-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Jakoviiva */
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 20px 0 40px;
+}
+
+/* Nappulat */
+.top-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-block;
+  
+}
+
+.btn-primary {
+  background: #454545;
+  color: #e4e4e4;
+}
+
+.btn-secondary {
+  background: #e4e4e4;
+  color: #454545;
+}
+
+.btn-other {
+  background: #ffffff;
+  color: #454545;
+  border-style: solid;
+  border-color: #e4e4e4;
+  border-width: 1px;
+}
+.btn-up {
+  background: #e4e4e4;
+  color: #454545;
+}
+
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+details {
+  user-select: none;
+  margin-top: 10px;
+}
+details>summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+details[open] > *:not(summary) {
+  padding: 0 0  0 20px;
+}
+details[open] summary span.icon {
+  transform: rotate(180deg);
+}
+
+details summary {
+  position:relative;
+  padding-left: 15px;
+  list-style: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
+details[open] summary::before {
+  content: "–";
+}
+
+details[open] .doi {
+    padding: 0px 0px 0px 20px;
+    color: #454545;
+}
+
+/* Mobiili */
+@media (max-width: 990px) {
+
+  .page-wrapper {
+    width: 90%;
+    padding: 24px;
+    max-width:593px;
+    
+  }
+
+  .section {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-left {
+    width: 100%;
+  }
+  .section-right {
+    padding-top:0;
+  }
+  .section-title {
+    margin-bottom: 6px;
+  }
+
+  .bottom-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .top-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}
